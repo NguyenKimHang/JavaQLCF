@@ -1,0 +1,15 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+Button {
+    -fx-font-weight: bold;
+}
+Label {
+    -fx-font-family: Palatino Linotype;
+    -fx-font-size: 20;
+    -fx-font-weight: bold;
+    }

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="879.0" prefWidth="1557.0" stylesheets="@datban.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quanliquancaphe.DatBanController">
+    <children>
+      <ImageView fitHeight="879.0" fitWidth="1574.0" layoutX="-4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/pngtree-painted-chinese-style-new-years-day-background-design-branchlanternnew-yearsfestivehappy-new-image_73084.jpg" />
+         </image>
+      </ImageView>
+        <Text id="Texts" layoutX="-4.0" layoutY="119.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ĐẶT BÀN" textAlignment="CENTER" wrappingWidth="1568.3333320617676" />
+        <HBox layoutY="195.0" prefHeight="685.0" prefWidth="1562.0" spacing="10.0">
+            <children>
+            <VBox prefHeight="685.0" prefWidth="641.0">
+               <children>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="5.0">
+                     <children>
+                        <TextField fx:id="txtNhapTimKiem" prefHeight="31.0" prefWidth="594.0" promptText="Tìm kiếm " style="-fx-background-color: rgb(255,69,0,0.5);" />
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@images/search.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </HBox>
+                  <TableView fx:id="tbBan" prefHeight="723.0" prefWidth="530.0">
+                    <columns>
+                      <TableColumn fx:id="colTenBan" prefWidth="99.0" style="-fx-background-color: rgb(255,69,0,0.1);" text="Tên Bàn" />
+                      <TableColumn fx:id="colSucChua" prefWidth="165.33338928222656" style="-fx-background-color: rgb(255,69,0,0.1);" text="Sức Chứa" />
+                        <TableColumn fx:id="colViTri" prefWidth="161.6665802001953" style="-fx-background-color: rgb(255,69,0,0.1);" text="Vị Trí Bàn" />
+                        <TableColumn fx:id="colTinhtrang" prefWidth="212.66653442382812" style="-fx-background-color: rgb(255,69,0,0.1);" text="Tình Trạng" />
+                    </columns>
+                  </TableView>
+               </children>
+            </VBox>
+                <VBox prefHeight="685.0" prefWidth="906.0">
+                    <children>
+                  <TableView fx:id="tbMon" prefHeight="276.0" prefWidth="724.0">
+                    <columns>
+                      <TableColumn fx:id="colTenMontheoLoai" prefWidth="276.66668701171875" style="-fx-background-color: rgb(255,69,0,0.1);" text="Món" />
+                      <TableColumn fx:id="colGiaBan" prefWidth="339.3333740234375" style="-fx-background-color: rgb(255,69,0,0.1);" text="Giá bán" />
+                        <TableColumn fx:id="colLoai" prefWidth="289.6666259765625" style="-fx-background-color: rgb(255,69,0,0.1);" text="Loại" />
+                    </columns>
+                  </TableView>
+                  <HBox prefHeight="81.0" prefWidth="724.0" spacing="5.0">
+                     <children>
+                        <Label prefHeight="21.0" prefWidth="123.0" text="Số lượng: " />
+                        <TextField fx:id="txtSoLuong" prefHeight="31.0" prefWidth="213.0" />
+                        <DatePicker fx:id="dateNgayDat" promptText="Ngày đặt" />
+                        <Button fx:id="btThem" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#themMonVaoHandler" prefWidth="120.0" style="-fx-background-color: rgb(255,69,0);" text="ĐẶT BÀN">
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/iconfinder_house_kitchen_table_1378836.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="80.0" />
+                           </HBox.margin></Button>
+                        <Button fx:id="btDel" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#XoaCTDH" prefHeight="31.0" prefWidth="120.0" style="-fx-background-color: rgb(255,69,0);" text="XÓA">
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/delete.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic></Button>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </HBox>
+                  <Label prefHeight="63.0" prefWidth="724.0" text="Thông tin đơn hàng" />
+                        <TableView fx:id="tbHoaDon" prefHeight="304.0" prefWidth="906.0">
+                            <columns>
+                                <TableColumn fx:id="colTenMon" prefWidth="208.33331298828125" style="-fx-background-color: rgb(255,69,0,0.1);" text="Tên món" />
+                                <TableColumn fx:id="colDonGia" prefWidth="250.66668701171875" style="-fx-background-color: rgb(255,69,0,0.1);" text="Đơn giá" />
+                                <TableColumn fx:id="colSoluong" minWidth="0.0" prefWidth="161.3333740234375" style="-fx-background-color: rgb(255,69,0,0.1);" text="Số lượng" />
+                                <TableColumn fx:id="colThanhTien" prefWidth="286.0" style="-fx-background-color: rgb(255,69,0,0.1);" text="Thành Tiền" />
+                            </columns>
+                        </TableView>
+                        <VBox prefHeight="75.0" prefWidth="906.0">
+                     <children>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                           <children>
+                                      <Button contentDisplay="RIGHT" mnemonicParsing="false" onAction="#troVeTrangChinh" style="-fx-background-color: #FFFF00;" text="TRANG CHỦ">
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/home.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="btThoat" mnemonicParsing="false" onAction="#btThoatHandler" style="-fx-background-color: #FFFFFF;">
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@images/Exit-128.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children></VBox>
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+    </children>
+</Pane>

@@ -1,0 +1,16 @@
+/*
+ * Empty Stylesheet file.
+ */
+#Textss {
+    -fx-fill: white;
+    }
+#Texts {
+    -fx-font-size: 70;
+    }
+Text { 
+    -fx-font-weight: bold;
+}
+Label {
+    -fx-font-family: Palatino Linotype;
+    -fx-font-weight: bold;
+    }

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane prefHeight="774.0" prefWidth="1091.0" stylesheets="@quanliban.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quanliquancaphe.QuanLiBanController">
+    <children>
+        <ImageView fitHeight="794.0" fitWidth="1093.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@images/hinh-lich-dep-20204.jpg" />
+            </image>
+        </ImageView>
+        <VBox layoutY="-1.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="774.0" prefWidth="1093.0">
+            <children>
+                <HBox prefHeight="145.0" prefWidth="1093.0" style="-fx-background-color: rgb(255, 69, 0, 0.7);">
+                    <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@images/tb.jpg" />
+                            </image>
+                        </ImageView>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="QUẢN LÍ BÀN" wrappingWidth="424.33203125">
+                            <font>
+                                <Font name="Palatino Linotype Bold" size="57.0" />
+                            </font>
+                            <HBox.margin>
+                                <Insets left="250.0" top="50.0" />
+                            </HBox.margin>
+                        </Text>
+                    </children>
+                </HBox>
+                <HBox prefHeight="268.0" prefWidth="1093.0" spacing="15.0">
+                    <children>
+                        <GridPane prefHeight="176.0" prefWidth="784.0" vgap="10.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="484.0" minWidth="10.0" prefWidth="167.0" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="826.0" minWidth="10.0" prefWidth="447.0" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <Label text="Sức chứa" textFill="WHITE" GridPane.rowIndex="2">
+                                    <font>
+                                        <Font name="Palatino Linotype Bold" size="20.0" />
+                                    </font>
+                                </Label>
+                                <Label text="Tình trạng trống" textFill="WHITE" GridPane.rowIndex="3">
+                                    <font>
+                                        <Font name="Palatino Linotype Bold" size="20.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="txtSucChua" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                <ComboBox fx:id="cbTinhTrang" prefWidth="150.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                <Label text="Mã" textFill="WHITE">
+                                    <font>
+                                        <Font name="System Bold" size="20.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="txtMaBan" disable="true" GridPane.columnIndex="1" />
+                                <Label text="Vị Trí Bàn" textFill="WHITE" GridPane.rowIndex="4">
+                                    <font>
+                                        <Font name="Palatino Linotype Bold" size="20.0" />
+                                    </font>
+                                </Label>
+                                <TextField fx:id="txtViTriBan" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                <Label text="Tên bàn" textFill="WHITE" GridPane.rowIndex="1">
+                           <font>
+                              <Font name="System Bold" size="15.0" />
+                           </font></Label>
+                                <TextField fx:id="txtTenBan" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                            </children>
+                            <HBox.margin>
+                                <Insets left="5.0" />
+                            </HBox.margin>
+                        </GridPane>
+                        <VBox prefHeight="200.0" prefWidth="120.0" spacing="10.0">
+                            <children>
+                                <Button contentDisplay="RIGHT" mnemonicParsing="false" onAction="#addBanAction" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #FFFF00;" text="Thêm">
+                                    <graphic>
+                                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@images/save.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                    <VBox.margin>
+                                        <Insets top="5.0" />
+                                    </VBox.margin>
+                                </Button>
+                                <Button fx:id="btUpdate" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#updateBanAction" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #FFFF00;" text="Cập nhật">
+                                    <graphic>
+                                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@images/update.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </Button>
+                            </children>
+                            <HBox.margin>
+                                <Insets right="5.0" />
+                            </HBox.margin>
+                        </VBox>
+                  <VBox prefHeight="200.0" prefWidth="120.0" spacing="10.0">
+                     <children>
+                                <Button fx:id="btDel" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#deleteBanAction" prefHeight="50.0" prefWidth="120.0" style="-fx-background-color: #FFFF00;" text="Xóa">
+                                    <graphic>
+                                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@images/delete.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                           <VBox.margin>
+                              <Insets top="5.0" />
+                           </VBox.margin>
+                                </Button>
+                              <Button fx:id="btThoat" alignment="CENTER" mnemonicParsing="false" onAction="#btThoatHandler" prefHeight="50.0" prefWidth="50.0" style="-fx-background-color: #ffffff;">
+                                  <graphic>
+                                      <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                          <image>
+                                              <Image url="@images/Exit-128.png" />
+                                          </image>
+                                      </ImageView>
+                                  </graphic>
+                              </Button>
+                     </children>
+                     <HBox.margin>
+                        <Insets right="5.0" />
+                     </HBox.margin>
+                  </VBox>
+                    </children>
+               <padding>
+                  <Insets bottom="10.0" top="10.0" />
+               </padding>
+                </HBox>
+                <HBox alignment="CENTER_RIGHT" prefHeight="46.0" prefWidth="600.0" spacing="5.0">
+                    <children>
+                        <Button fx:id="btTrangChu" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#troVeTrangChinh" prefHeight="40.0" style="-fx-background-color: rgb(255,255,0,0.5);;" text="TRANG CHỦ">
+                            <graphic>
+                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@images/home.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <HBox.margin>
+                                <Insets />
+                            </HBox.margin>
+                        </Button>
+                        <Button fx:id="btQLMon" contentDisplay="RIGHT" mnemonicParsing="false" onAction="#denQLMon" prefHeight="40.0" style="-fx-background-color: rgb(255,255,0,0.5);;" text="QUẢN LÍ MÓN">
+                            <graphic>
+                                <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@images/eat.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                        </Button>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="1135.0">
+                    <children>
+                        <TextField fx:id="txtNhapTimKiem" prefHeight="35.0" prefWidth="1039.0" promptText="Tìm kiếm ..." style="-fx-background-color: rgb(255,69,0,0.9);">
+                            <HBox.margin>
+                                <Insets right="5.0" />
+                            </HBox.margin>
+                        </TextField>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@images/search.png" />
+                            </image>
+                            <HBox.margin>
+                                <Insets left="5.0" right="10.0" />
+                            </HBox.margin>
+                        </ImageView>
+                    </children>
+                </HBox>
+                <TableView fx:id="tbBan" prefHeight="267.0" prefWidth="1093.0" style="-fx-background-color: #ffffff;">
+                    <columns>
+                        <TableColumn fx:id="colTenBan" minWidth="0.0" prefWidth="247.0" text="Tên Bàn" />
+                        <TableColumn fx:id="colSucChua" prefWidth="261.0" text="Sức Chứa" />
+                        <TableColumn fx:id="colTinhTrang" minWidth="0.0" prefWidth="199.0" text="Tình Trạng" />
+                        <TableColumn fx:id="colViTri" prefWidth="272.0" text="Vị Trí" />
+                    </columns>
+                </TableView>
+            </children>
+        </VBox>
+    </children>
+</Pane>

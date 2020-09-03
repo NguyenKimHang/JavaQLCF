@@ -1,0 +1,11 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+#Labels {
+    -fx-font-weight: bold;
+    -fx-font-size: 20;
+    }

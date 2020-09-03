@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="766.0" prefWidth="646.0" stylesheets="@chitietdonhang.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quanliquancaphe.ChiTietDonHangController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="172.0" prefWidth="646.0" spacing="10.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="HÓA ĐƠN BÁN HÀNG" textAlignment="CENTER" wrappingWidth="645.9999956267711">
+               <font>
+                  <Font name="System Bold" size="30.0" />
+               </font>
+            </Text>
+            <Label text="371 Nguyễn Kiệm, Q.Gò Vấp" />
+            <Label id="Labels" text="Hotline: 123456" />
+            <Label id="Labels" text="www.thanhhang.com" />
+         </children>
+      </VBox>
+      <VBox layoutY="167.0" prefHeight="414.0" prefWidth="647.0">
+         <children>
+            <GridPane prefHeight="132.0" prefWidth="647.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="314.0" minWidth="10.0" prefWidth="131.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="515.0" minWidth="10.0" prefWidth="515.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Ngày đặt" GridPane.rowIndex="1" />
+                  <Label text="Ngày Thanh Toán" GridPane.rowIndex="2" />
+                  <Label fx:id="lbNgayDat" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label fx:id="lbNgayThanhToan" text="Label" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label text="Mã Hóa Đơn: " />
+                  <Label fx:id="lbMaHD" text="Label" GridPane.columnIndex="1" />
+               </children>
+            </GridPane>
+            <GridPane fx:id="gpHD" prefHeight="186.0" prefWidth="647.0" style="-fx-grid-lines-visible: true;">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints maxHeight="107.0" minHeight="10.0" prefHeight="45.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="182.0" minHeight="10.0" prefHeight="182.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Số lượng" GridPane.columnIndex="1" />
+                  <Label text="Tên món" />
+                  <Label text="Đơn giá" GridPane.columnIndex="2" />
+                  <Label text="Thành Tiền" GridPane.columnIndex="3" />
+               </children>
+            </GridPane>
+            <Line endX="646.0" endY="659.5" startY="659.5" style="-fx-stroke: black; -fx-stroke-dash-array: 4;">
+               <VBox.margin>
+                  <Insets bottom="20.0" top="20.0" />
+               </VBox.margin>
+            </Line>
+            <GridPane prefHeight="43.0" prefWidth="647.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label id="Labels" text="Tổng tiền" />
+                  <Label id="Labels" fx:id="lbTongTien" text="Label" GridPane.columnIndex="1" />
+               </children>
+            </GridPane>
+         </children>
+      </VBox>
+      <VBox alignment="TOP_CENTER" layoutX="-4.0" layoutY="581.0" prefHeight="153.0" prefWidth="656.0" spacing="10.0">
+         <children>
+            <Line endX="646.0" endY="659.5" startY="659.5" style="-fx-stroke: black; -fx-stroke-dash-array: 4;" />
+            <Label id="Labels" text="WIFI : THANHHANG" />
+            <Label id="Labels" text="Password wifi : thanhhang" />
+            <Line endX="646.0" endY="659.5" startY="659.5" style="-fx-stroke: black; -fx-stroke-dash-array: 4;" />
+            <Label id="Labels" text="Chúc quý khách ngon miệng" />
+            <Label id="Labels" text="Cảm ơn và hẹn gặp lại" />
+         </children>
+      </VBox>
+   </children>
+</Pane>

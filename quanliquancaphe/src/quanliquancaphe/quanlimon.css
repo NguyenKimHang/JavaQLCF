@@ -1,0 +1,13 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.mainFxmlClass {
+
+}
+Button {
+    -fx-font-weight: bold;
+}
+Label {
+    -fx-font-weight: bold;
+   }
